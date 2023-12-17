@@ -30,7 +30,7 @@ const productCard = ({ image, category, title, price, description }) => {
             />
 
             <Text className="text-xl dark:text-white">
-              {Math.max(0, count)}
+              {Math.max(1, count)}
             </Text>
             <AntDesign
               name="pluscircleo"
@@ -40,7 +40,7 @@ const productCard = ({ image, category, title, price, description }) => {
             />
           </View>
           <Text className="text-2xl font-extrabold text-green-500">
-            € {price * Math.max(0, count)}
+            € {price * Math.max(1, count)}
           </Text>
         </View>
 
