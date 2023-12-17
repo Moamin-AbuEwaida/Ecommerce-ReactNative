@@ -28,7 +28,9 @@ const productCard = ({ image, category, title, price, description }) => {
               color={colorScheme === "light" ? "black" : "white"}
               onPress={() => setCount(count - 1)}
             />
-            <Text className="text-xl dark:text-white">{count}</Text>
+            <Text className="text-xl dark:text-white">
+              {Math.max(0, count)}
+            </Text>
             <AntDesign
               name="pluscircleo"
               size={24}
@@ -37,7 +39,7 @@ const productCard = ({ image, category, title, price, description }) => {
             />
           </View>
           <Text className="text-2xl font-extrabold text-green-500">
-            € {price * count}
+            € {price * Math.max(0, count)}
           </Text>
         </View>
 
