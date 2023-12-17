@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
-import { useColorScheme } from "react-native";
+import { useColorScheme } from "nativewind";
 
 const productCard = ({ image, category, title, price, description }) => {
   const [count, setCount] = useState(1);
@@ -25,16 +25,17 @@ const productCard = ({ image, category, title, price, description }) => {
             <AntDesign
               name="minuscircleo"
               size={24}
-              color={colorScheme === "light" ? "black" : "white"}
+              color={colorScheme === "dark" ? "white" : "black"}
               onPress={() => setCount(count - 1)}
             />
+
             <Text className="text-xl dark:text-white">
               {Math.max(0, count)}
             </Text>
             <AntDesign
               name="pluscircleo"
               size={24}
-              color={colorScheme === "light" ? "black" : "white"}
+              color={colorScheme === "dark" ? "white" : "black"}
               onPress={() => setCount(count + 1)}
             />
           </View>
